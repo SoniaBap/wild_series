@@ -25,7 +25,7 @@ class Program
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Category $category = null;
+    private ? Category $category = null;
 
     public function getId(): ?int
     {
@@ -68,12 +68,12 @@ class Program
         return $this;
     }
 
-    public function getCategory(): ?Category
+    public function getCategory(): ? Category
     {
         return $this->category;
     }
 
-    public function setCategory(?Category $category): self
+    public function setCategory(? Category $category): self
     {
         $this->category = $category;
 

@@ -18,13 +18,15 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         $program->setPoster('the-walking-dead.jpg');
         $manager->persist($program);
         $manager->flush();
+
     }
+
 
     public function getDependencies()
     {
         // Tu retournes ici toutes les classes de fixtures dont ProgramFixtures dépend
         return [
-            CategoryFixtures::class,
+                CategoryFixtures::class,
         ];
     }
 }
